@@ -1,0 +1,29 @@
+name = "Wasmtime"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/bytecodealliance/wasmtime"
+
+[platform]
+[platform.linux]
+archive-prefix = "wasmtime-v{version}-{arch}-linux"
+exe-path = "wasmtime"
+download-file = "wasmtime-v{version}-{arch}-linux.tar.xz"
+
+[platform.macos]
+archive-prefix = "wasmtime-v{version}-{arch}-macos"
+exe-path = "wasmtime"
+download-file = "wasmtime-{arch}-macos.tar.xz"
+
+[platform.windows]
+archive-prefix = "wasmtime-v{version}-{arch}-windows"
+exe-path = "wasmtime.exe"
+download-file = "wasmtime-v{version}-{arch}-{os}.zip"
+
+[install]
+download-url = "https://github.com/bytecodealliance/wasmtime/releases/download/v{version}/{download_file}"
+
+[install.exes]
+[install.exes.wasmtime]
+exe-path = "wasmtime"
+primary = true
