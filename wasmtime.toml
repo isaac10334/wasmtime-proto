@@ -5,18 +5,12 @@ type = "cli"
 git-url = "https://github.com/bytecodealliance/wasmtime"
 
 [platform]
-[platform.linux]
-archive-prefix = "wasmtime-v{version}-{arch}-linux"
+archive-prefix = "wasmtime-v{version}-{arch}-{os}"
 exe-path = "wasmtime"
-download-file = "wasmtime-v{version}-{arch}-linux.tar.xz"
-
-[platform.macos]
-archive-prefix = "wasmtime-v{version}-{arch}-macos"
-exe-path = "wasmtime"
-download-file = "wasmtime-{arch}-macos.tar.xz"
+download-file = "wasmtime-v{version}-{arch}-{os}.tar.xz"
 
 [platform.windows]
-archive-prefix = "wasmtime-v{version}-{arch}-windows"
+archive-prefix = "wasmtime-v{version}-{arch}-{os}"
 exe-path = "wasmtime.exe"
 download-file = "wasmtime-v{version}-{arch}-{os}.zip"
 
